@@ -27,8 +27,8 @@ jobs:
       - id: identify_env 
         run: if [ ${GITHUB_HEAD_REF} = "main" ];then export github_env='prod'; else export github_env=${GITHUB_HEAD_REF}; fi
 
-      outputs:
-        github_env: ${{ steps.identify_env.outputs.github_env }}
+    outputs:
+      github_env: ${{ steps.identify_env.outputs.github_env }}
 
   build:
     needs: env_selector
