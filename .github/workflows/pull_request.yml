@@ -27,6 +27,7 @@ jobs:
       - name: env selector
         id: identify
         run: |
+          echo "Head:${GITHUB_HEAD_REF}   base:${GITHUB_BASE_REF}"
           if [ ${GITHUB_HEAD_REF} = "main" ];then export github_env='prod'; else export github_env=${GITHUB_HEAD_REF}; fi
           echo "::set-output name=github_env::${github_env}"
 
