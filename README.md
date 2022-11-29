@@ -47,3 +47,6 @@ This branch based github actions will trigger on a pull request creation and mer
 - Merging into `test branch` will run a `terraform apply` and your AWS assets will be deployed into your `test` accounts.
 - Merging into `main branch` will run a `terraform apply` and your AWS assets will be deployed into your `Prod` accounts.
 >NOTE: make sure you are creating pull requests/ merging within your fork
+
+
+Testing the CI please trigger the pull request workflow
