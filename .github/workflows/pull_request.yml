@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: env selector
         id: identify
-        run: if [ ${GITHUB_HEAD_REF} = "main" ];then export github_env='prod'; else export github_env=${GITHUB_HEAD_REF}; fi
+        run: echo "${GITHUB_HEAD_REF} ${GITHUB_BASE_REF}"; if [ ${GITHUB_HEAD_REF} = "main" ];then export github_env='prod'; else export github_env=${GITHUB_HEAD_REF}; fi
     outputs:
       github_env: ${{ steps.identify.outputs.github_env }}
 
