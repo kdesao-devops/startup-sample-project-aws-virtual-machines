@@ -48,4 +48,4 @@ This branch based github actions will trigger on a pull request creation and mer
 - Merging into `main branch` will run a `terraform apply` and your AWS assets will be deployed into your `Prod` accounts.
 >NOTE: make sure you are creating pull requests/ merging within your fork
 
-Testing CI
+Testing CI, does it triggers ??
